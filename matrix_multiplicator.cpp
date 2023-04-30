@@ -29,4 +29,21 @@ int main() {
             std::cout << elem << "\n";
         }
     }
+
+    // matrix multiplication
+    int sum = 0;
+    int ll = 0;
+    for (int i = 0; i < A.size(); ++i) {
+        for (int j = 0; j < B.size(); ++j) {
+            sum += A[i][j]*B[j][i];
+        }
+        if (ll >= A.size()) {
+            ll = 0;
+            D[i][ll] = sum;
+            ll += 1;
+        } else {
+            D[i][ll] = sum;
+            ll += 1;
+        }
+    }
 }

@@ -2,20 +2,24 @@
 
 int main(int argc, char* argv[]) {
 
-    /*
-    Get two integers from the user and spit their product!
-    */
+    // difference between logical and relational operators
+    int vec1[4] = {1, 2, 3, 4};
+    int vec2[4] = {5, 6, 7, 8};
+    int scalar_product = 0;
+    for (int i = 0; i < 4; i++) {
+        scalar_product += vec1[i]*vec2[i];
+    }
 
-    int num1, num2;
+    std::cout << "Scalar product is " << scalar_product << "\n";
 
-    std::cout << "Write the first number: ";
-    std::cin >> num1;
+    double x = -2.0;
 
-    std::cout << "Write the second number: ";
-    std::cin >> num2;
+    if (x < 0.0) {
+        x = 0.0;
+    }
 
-    int prod = num1 * num2;
-    std::cout << "The product of " << num1 << " and " << num2 << " is " << prod << "\n";
+    std::cout << "x is now " << x << "\n";
+
 
     return 0;
 }
